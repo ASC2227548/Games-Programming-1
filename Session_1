@@ -1,0 +1,10 @@
+
+num = int(input("Print a number:"))
+
+if num <= 100:
+    print("That's a small number")
+elif num <= 1000:
+    print("That's not a big number yet")
+else: 
+    print("That's what I call a big number!!")
+
