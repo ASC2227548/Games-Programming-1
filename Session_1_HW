@@ -1,0 +1,16 @@
+# Gets the users input and makes it a variable
+name = input("Give Me a Monsters Name: ")
+# Get the last letter in the users input
+last = name[-1]
+# Defines the vowels
+vowels = "aeiouAEIOU"
+
+# Checks if the last letter if the input has a vowel in it
+if last in vowels:
+    print (name + "ling")
+# Otherwise if the input is equal or less than 3 it adds baby
+elif len(name) <= 3:
+    print ("Baby " + name)
+# If nothing applies then it adds elle
+else:
+    print (name + "elle")
