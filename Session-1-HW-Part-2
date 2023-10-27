@@ -1,1 +1,28 @@
+# Give context of the story
+print ("Welcome to what posiblaly could be your last days on earth!!")
 
+print("You have woken up in a forest but when you look up you are trapped in a giant enclosed glass island. Where are you? Are there more people on this massive island? Will you die here? All these questions flood your head, but you wont get these answers from laying down.")
+ 
+#Get the players first action in the game
+user_input = input("Which direction would you like to go? North to the building you can see in the distance? East to the beach off the forest? South to more forest or west into a cave system to find out a way out of the glass entrapment? Type 'north', 'south', 'east', 'west', or 'quit' to exit.")
+ 
+# Now ask a series of questions to furher the game
+if user_input == "quit":
+    print("Why did you quit you loser?")
+elif user_input == "north":
+    print("You reach the building but still no one in sight.")
+elif user_input == "east":
+    print("You reached the beach and you cant see any airplanes nearby islands or boats")
+elif user_input == "south":
+    print("You travel into more forest and get lost you eventually drive yourself insane and kill yourself")
+elif user_input == "west":
+    print("You enter the cave hoping for the best you find light in the distance a fire maybe a torch? ")
+    
+if user_input == "north":
+   north_1 = input("You see a door to the right but you see a lader to the roof on the left which do you take? Type 'right' or 'left' ")
+elif user_input == "east":
+    east_1 = input("The beach is useless but as you turn around you notice two things in the distance on the beach. you get closer and its a building that gets you out of the globe and the other thing is another human! Will you introduce yourself or will you try to escape? Type 'yes' for meeting the human or 'no' for the building ")
+elif user_input == "west":
+    west_1 = input("You walk towards the light and you find a decaying body with a small fire. You take his supplies but you notice that he has a uniform on maybe this person got lost on his own island will you risk taking his uniform or store it in the cave for later use? Type 'yes' to take the uniform or 'no' to store it ")
+    
+# Can continue with a series of question for the player. But things to make more interesting is simple puzzles and dialoge and the player giving their name to put continuity in the game.
