@@ -1,0 +1,21 @@
+x = ['mix', 'xyz', 'apple', 'xanadu', 'rovio']
+
+# create two lists to sort in 
+xstrings = []
+otherstrings = []
+
+# Categorize the words based on whether they start with a x
+for string in x:
+    if string.startswith('x'):
+        xstrings.append(string)
+    else:
+        otherstrings.append(string)
+
+# Sort the two lists
+xstrings.sort()
+otherstrings.sort()
+
+# Make the final list in order with the x words first
+sortedstrings = xstrings + otherstrings
+
+print(sortedstrings)
