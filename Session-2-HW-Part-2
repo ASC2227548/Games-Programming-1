@@ -1,0 +1,12 @@
+words = ["xxx", "aaa", "r5t6yy", "g", "wow"]
+
+count = 0
+
+# Check each word in the list
+for word in words:
+    # Check if the string has a length of 2 or more and the first and last chars are the same
+    if len(word) >= 2 and word[0] == word[-1]:
+        count += 1
+
+# Print the answer
+print("Number of words that meet the criteria is:", count)
