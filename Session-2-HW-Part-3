@@ -1,0 +1,16 @@
+guess_count = 0
+max_attempts = 3
+correct_password = "Password123"
+
+while guess_count < max_attempts:
+    guess = input("Guess the password: ")
+
+    if guess == correct_password:
+        print("Correct!!")
+        break
+    else:
+        guess_count += 1
+        print("Incorrect!!")
+
+if guess_count == max_attempts:
+    print("You Lost!!")
