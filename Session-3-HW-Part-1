@@ -1,0 +1,17 @@
+user_input = input("Enter a date (dd/mm/yyyy): ")
+date_parts = user_input.split('/')
+
+if len(date_parts) == 3 and date_parts[0].isdigit() and date_parts[1].isdigit() and date_parts[2].isdigit():
+    day, month, year = map(int, date_parts)
+    
+    if 1 <= day <= 31 and 1 <= month <= 12:
+        months_dict = {
+            1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
+            7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"
+        }
+        month_word = months_dict[month]
+        print(f"The date is {month_word} {day}, {year}.")
+    else:
+        print("Invalid day or month values.")
+else:
+    print("Invalid date format or day/month values.")
