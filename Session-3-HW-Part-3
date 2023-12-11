@@ -1,0 +1,10 @@
+
+myList = ["axe", "dagger", "oranges"]
+
+newList = []
+
+for item in myList:
+    newList.append("*")
+    newList.append(item)
+
+print(newList)
