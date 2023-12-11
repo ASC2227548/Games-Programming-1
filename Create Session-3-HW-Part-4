@@ -1,0 +1,7 @@
+tupleList = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+
+newList = [tup for tup in tupleList if tup]
+
+print(newList)
+
+
