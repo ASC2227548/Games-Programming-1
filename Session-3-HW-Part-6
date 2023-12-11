@@ -1,0 +1,40 @@
+player_stats = {"health": 100, "magic": 50, "courage": 75}
+
+items = {
+    "health_potion": 3,
+    "magic_scroll": 2,
+    "courage_amulet": 1
+}
+
+while True:
+    print("\n1. Display inventory")
+    print("2. Use item")
+    print("3. Quit")
+
+    choice = input("Enter your choice (1-3): ")
+
+    if choice == "1":
+        print("Inventory:")
+        for item, quantity in items.items():
+            print(f"{item}: Quantity: {quantity}")
+    elif choice == "2":
+        item_to_use = input("Enter the name of the item to use: ")
+        if item_to_use in items and items[item_to_use] > 0:
+            if item_to_use == "health_potion":
+                player_stats["health"] += 20
+                print(f"Used {item_to_use}. Health increased by 20.")
+            elif item_to_use == "magic_scroll":
+                player_stats["magic"] += 10
+                print(f"Used {item_to_use}. Magic increased by 10.")
+            elif item_to_use == "courage_amulet":
+                player_stats["courage"] += 15
+                print(f"Used {item_to_use}. Courage increased by 15.")
+
+            items[item_to_use] -= 1
+        else:
+            print(f"You don't have {item_to_use} in your inventory.")
+    elif choice == "3":
+        print("Exiting the game. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 3.")
