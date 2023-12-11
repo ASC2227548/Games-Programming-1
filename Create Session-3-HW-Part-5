@@ -1,0 +1,18 @@
+room_items = {
+    "item1": {"Name": "Lamp", "Colour": "Red"},
+    "item2": {"Name": "Table", "Colour": "Brown", "Type": 0},
+    "item3": {"Name": "Lamp", "Colour": "Red"},
+    "item4": {"Name": "Chair", "Colour": "Green", "Type": 1}
+}
+
+unique_items = {}
+
+for key, value in room_items.items():
+    # Convert the item to a tuple to use it as a key
+    item_tuple = tuple(sorted(value.items()))
+
+    # Check if the item is not already in the new dictionary
+    if item_tuple not in unique_items.values():
+        unique_items[key] = value
+
+print(unique_items)
