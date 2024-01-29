@@ -1,0 +1,57 @@
+import pygame, sys
+
+
+screenX = 600
+screenY = 600
+
+pygame.init()
+pygame.display.set_caption("Test Game")
+screen = pygame.display.set_mode((screenX, screenY))
+clock = pygame.time.Clock()
+
+
+
+
+xpos = 200
+ypos = 200
+
+while True:
+  clock.tick(60)
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      sys.exit()
+    
+  pressed_key = pygame.key.get_pressed()
+
+  if pressed_key[pygame.K_RIGHT]:
+    if xpos >= screenX:
+      xpos = 0
+    else:
+      xpos += 5
+    
+  if pressed_key[pygame.K_LEFT]:
+    if xpos <= 0:
+      xpos = screenX
+    else:
+      xpos -= 5
+      
+      
+  if pressed_key[pygame.K_UP]:
+    if ypos < 0:
+      ypos = screenY
+    else:
+      ypos -= 5
+      
+  if pressed_key[pygame.K_DOWN]:
+    if ypos > screenY:
+      ypos = 0
+    else:
+      ypos += 5
+     
+    
+    
+  screen.fill((20,75,4))
+  pygame.draw.circle(screen, (255,0,0), (xpos,ypos), 20, 2)
+  pygame.display.flip()
+  pygame.display.update()
+
